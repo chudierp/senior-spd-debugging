@@ -17,7 +17,7 @@ _Then I noticed another bug ..._
 
 [[Your answer goes here!]]
 TypeError: 'topping' is an invalid keyword argument for PizzaTopping
-changed "topping" to topping_type
+changed "topping" to topping_type. Also, the redirect method had an endpoint in it, instead of the function that you want to redirect to. It was '/' when it should be 'home'. Then I used the trace backward technique starting at line 89 where the call is made to add the pizza to the db. I discovered that the pizza_order_submit() was retrieving the wrong names of the input fields in the form. However, this still didn't fix the bug. I noticed that db.session.commit() was called in other areas after making calls to the database. So I added it after adding to the db when submitting an order, and before making a query call in the home function.
 
 
 
