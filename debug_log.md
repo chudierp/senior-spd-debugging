@@ -29,3 +29,6 @@ changed "topping" to topping_type
 ## Exercise 3
 
 [[Your answer goes here!]]
+- [IndexError: list index out of range] line 37. Solution was I changed the index variable from the left subarray to the right.
+- [TypeError: list indices must be integers or slices, not float]: I changed line 48 from the classic division sign to double-slash for “floor” division (rounds down to nearest whole number).
+- [Sorted list of nums isn't actually sorted] the index for the sorted array wasn't being updated in both while loops that take care of extra numbers that haven't been visited in either halves of the subarray
