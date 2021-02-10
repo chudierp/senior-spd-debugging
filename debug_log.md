@@ -24,6 +24,7 @@ changed "topping" to topping_type
 ## Exercise 2
 
 [[Your answer goes here!]]
+- I added a .env file in directory to store API key. I then corrected the url to make the correct API call. I was getting  KeyError: 'temperature'. So I looked at line 54 and noticed 'temp' was spelled out as 'temperature' in the JSON data, so when I corrected the spelling, the weather app worked but when I looked over the results I noticed that although I selected Fahrenheit, it was still displaying it in Kelvin so I changed the API call to units=imperial, and went to the results.html file  
 
 ## Exercise 3
 
