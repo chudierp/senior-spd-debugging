@@ -39,7 +39,7 @@ def results():
     city = request.args.get('city')
     units = request.args.get('requested_units')
 
-    url = f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units={units}'
+    url = f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=imperial'
     # params = {
     #     'appid': API_KEY,
     #     'place': city,
@@ -55,7 +55,7 @@ def results():
         'temp': result_json['main']['temp'],
         'humidity': result_json['main']['humidity'],
         'wind_speed': result_json['wind']['speed'],
-        'units_letter': get_letter_for_units(units)
+        # 'units_letter': get_letter_for_units(units)
     }
 
     return render_template('results.html', **context)
